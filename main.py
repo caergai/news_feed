@@ -280,6 +280,13 @@ async def run_news(settings: config.Settings | None = None) -> str | None:
     html_path = save_html(html_content, out_dir)
     log.info("[%s] HTML written to %s", sid, html_path)
 
+    # Index page output
+    from output_html import render_index, save_index
+    # Note: reports are actually in out_dir/reports since we moved them
+    idx_content = render_index(os.path.join(out_dir, "reports"))
+    idx_path = save_index(idx_content, out_dir)
+    log.info("[%s] Index written to %s", sid, idx_path)
+
     elapsed = time.time() - start
 
     log.info("[%s] Done in %.0fs. %d stories -> %s (HTML: %s)", sid, elapsed, len(summarized), path, html_path)

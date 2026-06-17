@@ -261,3 +261,84 @@ def save_html(full_html: str, output_dir: str) -> str:
     with open(path, "w", encoding="utf-8") as f:
         f.write(full_html)
     return path
+
+def render_index(reports_dir: str) -> str:
+    """Render a simple index.html listing all available reports."""
+    now_str = datetime.now().strftime("%B %d, %Y")
+    
+    # Find all .html files in the reports directory
+    files = []
+    if os.path.isdir(reports_dir):
+        for f in os.listdir(reports_dir):
+            if f.endswith(".html") and f != "index.html":
+                files.append(f)
+    
+    # Sort files descending (newest first)
+    files.sort(reverse=True)
+    
+    links_html = ""
+    for f in files:
+        date = f.replace(".html", "")
+        links_html += f'<li><a href="reports/{f}">{date}</a></li>\n'
+    
+    full = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Horizon News Archive</title>
+<style>
+  :root {{
+    --bg: #0f1117;
+    --text: #e5e7eb;
+    --accent: #6ee7b7;
+    --link: #7dd3fc;
+    --border: #2d2f3a;
+  }}
+  body {{
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }}
+  h1 {{
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }}
+  ul {{ list-style: none; padding: 0; }}
+  li {{ margin: 1rem 0; }}
+  a {{ 
+    color: var(--link); 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: inline-block;
+    transition: background 0.2s;
+  }}
+  a:hover {{ background: rgba(125,211,252,0.1); }}
+</style>
+</head>
+<body>
+  <h1>The Horizon News Archive</h1>
+  <p style="margin-bottom: 2rem; color: #9ca3af;">Select a date to view the digest</p>
+  <ul>
+    {links_html}
+  </ul>
+</body>
+</html>"""
+    return full
+
+def save_index(index_html: str, output_dir: str) -> str:
+    """Saves the index.html to the root of the output directory."""
+    os.makedirs(output_dir, exist_ok=True)
+    path = os.path.join(output_dir, "index.html")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(index_html)
+    return path
+
