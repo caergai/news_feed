@@ -282,9 +282,10 @@ async def run_news(settings: config.Settings | None = None) -> str | None:
 
     # Index page output
     from output_html import render_index, save_index
-    # Note: reports are actually in out_dir/reports since we moved them
-    idx_content = render_index(os.path.join(out_dir, "reports"))
-    idx_path = save_index(idx_content, out_dir)
+    # The index should be in the root of the served directory (the parent of 'reports')
+    index_dir = os.path.dirname(out_dir)
+    idx_content = render_index(out_dir)
+    idx_path = save_index(idx_content, index_dir)
     log.info("[%s] Index written to %s", sid, idx_path)
 
     elapsed = time.time() - start
