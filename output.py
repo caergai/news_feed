@@ -130,9 +130,18 @@ def save_feed_json(stories: list[dict], output_dir: str, max_items: int = 3) -> 
     children = []
     for s in sorted_stories:
         title = (s.get("hook") or s.get("title", "Untitled")).strip()
-        body = (s.get("summary") or s.get("snippet", "")).strip()
-        if len(body) > 200:
-            body = body[:197] + "..."
+        summary = (s.get("summary") or s.get("snippet", "")).strip()
+        takeaway = (s.get("key_takeaway") or "").strip()
+        # Combine summary + takeaway for a fuller article
+        if summary and takeaway:
+            body = summary + "\n\n" + takeaway
+        elif summary:
+            body = summary
+        else:
+            body = (s.get("snippet", "")).strip()
+        # Allow up to 800 chars for a couple paragraphs
+        if len(body) > 800:
+            body = body[:797] + "..."
         children.append({"kind": "t3", "data": {"title": title, "selftext": body}})
     feed = {"data": {"children": children}}
     index_dir = os.path.dirname(output_dir)
