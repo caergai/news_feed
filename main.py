@@ -261,7 +261,7 @@ async def run_news(settings: config.Settings | None = None) -> str | None:
 
     # JSON feed for VRChat world (top 3 stories)
     from output import save_feed_json
-    feed_path = save_feed_json(summarized, out_dir, max_items=3)
+    feed_path = save_feed_json(summarized, out_dir, max_items=12)
     log.info("[%s] VRChat feed written to %s", sid, feed_path)
 
     # HTML output (no images)
