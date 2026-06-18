@@ -11,8 +11,8 @@ def push_reports():
     project_root = os.path.dirname(os.path.abspath(__file__))
     
     try:
-        # 1. Stage the reports folder
-        subprocess.run(["git", "add", "reports/"], check=True, cwd=project_root)
+        # 1. Stage the reports folder and feed.json
+        subprocess.run(["git", "add", "reports/", "feed.json"], check=True, cwd=project_root)
         
         # 2. Commit the changes
         date_str = datetime.now().strftime("%Y-%m-%d")

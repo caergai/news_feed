@@ -121,3 +121,22 @@ def save_digest(digest: str, output_dir: str) -> str:
     with open(path, "w", encoding="utf-8") as f:
         f.write(digest)
     return path
+
+
+def save_feed_json(stories: list[dict], output_dir: str, max_items: int = 3) -> str:
+    """Save a small JSON feed compatible with VRChat VRCStringDownloader + SimpleJsonParser."""
+    import json as _json
+    sorted_stories = sorted(stories, key=lambda x: x.get("score", 0), reverse=True)[:max_items]
+    children = []
+    for s in sorted_stories:
+        title = (s.get("hook") or s.get("title", "Untitled")).strip()
+        body = (s.get("summary") or s.get("snippet", "")).strip()
+        if len(body) > 200:
+            body = body[:197] + "..."
+        children.append({"kind": "t3", "data": {"title": title, "selftext": body}})
+    feed = {"data": {"children": children}}
+    index_dir = os.path.dirname(output_dir)
+    path = os.path.join(index_dir, "feed.json")
+    with open(path, "w", encoding="utf-8") as f:
+        _json.dump(feed, f, indent=2, ensure_ascii=False)
+    return path
