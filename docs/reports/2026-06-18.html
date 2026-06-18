@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Horizon News - June 18, 2026</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card-bg: #1a1b26;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #6ee7b7;
+    --link: #7dd3fc;
+    --border: #2d2f3a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+  .cat {
+    font-size: 1.25rem;
+    border-left: 4px solid #666;
+    padding-left: 0.75rem;
+    margin: 2rem 0 1rem;
+  }
+  .cat:first-of-type { margin-top: 1rem; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .img-wrap {
+    width: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    display: flex;
+  }
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-body { padding: 1.25rem; }
+  .card-body h3 {
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin-bottom: 0.6rem;
+  }
+  .card-body h3 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .card-body h3 a:hover { color: var(--link); }
+  .summary {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .takeaway {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 0.6rem;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .source {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .actions { display: flex; gap: 0.5rem; }
+  .btn, .btn-copy {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.15s;
+  }
+  .btn {
+    background: transparent;
+    color: var(--link);
+  }
+  .btn:hover { background: rgba(125,211,252,0.1); }
+  .btn-copy {
+    background: transparent;
+    color: var(--muted);
+  }
+  .btn-copy:hover { background: rgba(110,231,183,0.1); color: var(--accent); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    body { padding: 1rem; }
+    h1 { font-size: 1.5rem; }
+    .card-footer { flex-direction: column; align-items: flex-start; }
+    .actions { width: 100%; justify-content: flex-start; }
+  }
+</style>
+</head>
+<body>
+<h1>The Horizon News</h1>
+<p class="subtitle">June 18, 2026 | 3 stories</p>
+
+<h2 class="cat" style="border-left-color:#6b7280">Global Affairs</h2>
+
+        <div class="card" id="card0_0">
+          
+          <div class="card-body">
+            <h3><a href="https://x.com/cnnbrk/status/2067300522491527620" target="_blank">US releases official 14-point deal with Iran ahead of Friday signing.</a></h3>
+            <p class="summary">The United States has officially released the text of a 14-point agreement negotiated with Iran. According to CNN Breaking News, the deal is scheduled to be formally signed this coming Friday. This disclosure marks a significant diplomatic development, moving the accord from negotiation to a concrete framework for potential implementation.</p>
+            <p class="takeaway">The release and impending signing of this 14-point framework indicate a concrete shift toward resolving tensions between the US and Iran, potentially reshaping diplomatic dynamics in the region.</p>
+            <div class="card-footer">
+              <span class="source"> via Twitter/X</span>
+              <div class="actions">
+                <a href="https://x.com/cnnbrk/status/2067300522491527620" target="_blank" class="btn">Source</a>
+                <button id="btn00" class="btn-copy" onclick="copy00()">Copy for Reddit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<h2 class="cat" style="border-left-color:#6b7280">Science</h2>
+
+        <div class="card" id="card1_0">
+          
+          <div class="card-body">
+            <h3><a href="https://www.livescience.com/space/space-exploration/a-secretive-chinese-probe-has-just-arrived-at-one-of-earths-quasi-moons-and-will-soon-attempt-a-first-of-its-kind-landing" target="_blank">China&#x27;s secretive Tianwen-2 probe reaches Earth&#x27;s quasi-moon for a historic landing attempt.</a></h3>
+            <p class="summary">China&#x27;s Tianwen-2 probe has arrived at Earth&#x27;s quasi-moon and will soon attempt a first-of-its-kind landing. The mission centers on a secretive Chinese spacecraft that has successfully reached this target for a historic surface operation. This attempt represents a novel achievement in space exploration, as no probe has previously landed on a quasi-moon. The endeavor underscores the growing sophistication of missions targeting unique celestial bodies for direct contact.</p>
+            <p class="takeaway">This mission advances space exploration capabilities by attempting the first landing on a quasi-moon, setting a new benchmark for precision operations on unique near-Earth objects.</p>
+            <div class="card-footer">
+              <span class="source"> via News</span>
+              <div class="actions">
+                <a href="https://www.livescience.com/space/space-exploration/a-secretive-chinese-probe-has-just-arrived-at-one-of-earths-quasi-moons-and-will-soon-attempt-a-first-of-its-kind-landing" target="_blank" class="btn">Source</a>
+                <button id="btn10" class="btn-copy" onclick="copy10()">Copy for Reddit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<h2 class="cat" style="border-left-color:#6b7280">Technology</h2>
+
+        <div class="card" id="card2_0">
+          
+          <div class="card-body">
+            <h3><a href="https://www.bostonherald.com/2026/06/17/g7-artificial-intelligence" target="_blank">French president urges US AI sharing at G7 as Europe demands regulatory checks.</a></h3>
+            <p class="summary">AI executives gathered at the G7 summit as the French president urged the United States to share cutting-edge artificial intelligence capabilities with allied nations. The summit highlights a push for democracies to cooperate on AI regulation while addressing growing tensions over tech sovereignty. European officials are leading demands for stricter checks on AI development to safeguard regional autonomy against global tech dominance.</p>
+            <p class="takeaway">The G7 gathering signals that AI governance is becoming a central geopolitical fault line, where democratic unity depends on resolving conflicts between technology sharing and national sovereignty.</p>
+            <div class="card-footer">
+              <span class="source"> via News</span>
+              <div class="actions">
+                <a href="https://www.bostonherald.com/2026/06/17/g7-artificial-intelligence" target="_blank" class="btn">Source</a>
+                <button id="btn20" class="btn-copy" onclick="copy20()">Copy for Reddit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<footer>The Horizon News - curated daily</footer>
+
+<script>
+  function copy00(){navigator.clipboard.writeText('US releases official 14-point deal with Iran ahead of Friday signing.\n\nThe United States has officially released the text of a 14-point agreement negotiated with Iran. According to CNN Breaking News, the deal is scheduled to be formally signed this coming Friday. This disclosure marks a significant diplomatic development, moving the accord from negotiation to a concrete framework for potential implementation.\n\nThe release and impending signing of this 14-point framework indicate a concrete shift toward resolving tensions between the US and Iran, potentially reshaping diplomatic dynamics in the region.');document.getElementById('btn00').textContent='Copied!';setTimeout(()=>{document.getElementById('btn00').textContent='Copy for Reddit'},1500);}
+  function copy10(){navigator.clipboard.writeText('China&#x27;s secretive Tianwen-2 probe reaches Earth&#x27;s quasi-moon for a historic landing attempt.\n\nChina&#x27;s Tianwen-2 probe has arrived at Earth&#x27;s quasi-moon and will soon attempt a first-of-its-kind landing. The mission centers on a secretive Chinese spacecraft that has successfully reached this target for a historic surface operation. This attempt represents a novel achievement in space exploration, as no probe has previously landed on a quasi-moon. The endeavor underscores the growing sophistication of missions targeting unique celestial bodies for direct contact.\n\nThis mission advances space exploration capabilities by attempting the first landing on a quasi-moon, setting a new benchmark for precision operations on unique near-Earth objects.');document.getElementById('btn10').textContent='Copied!';setTimeout(()=>{document.getElementById('btn10').textContent='Copy for Reddit'},1500);}
+  function copy20(){navigator.clipboard.writeText('French president urges US AI sharing at G7 as Europe demands regulatory checks.\n\nAI executives gathered at the G7 summit as the French president urged the United States to share cutting-edge artificial intelligence capabilities with allied nations. The summit highlights a push for democracies to cooperate on AI regulation while addressing growing tensions over tech sovereignty. European officials are leading demands for stricter checks on AI development to safeguard regional autonomy against global tech dominance.\n\nThe G7 gathering signals that AI governance is becoming a central geopolitical fault line, where democratic unity depends on resolving conflicts between technology sharing and national sovereignty.');document.getElementById('btn20').textContent='Copied!';setTimeout(()=>{document.getElementById('btn20').textContent='Copy for Reddit'},1500);}
+</script>
+</body>
+</html>

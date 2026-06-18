@@ -4,22 +4,22 @@
       {
         "kind": "t3",
         "data": {
-          "title": "Test: Feed connected!",
-          "selftext": "This is a test article. If you see this in VRChat, the GitHub Pages feed is working. Next step: connect a live news source."
+          "title": "US releases official 14-point deal with Iran ahead of Friday signing.",
+          "selftext": "The United States has officially released the text of a 14-point agreement negotiated with Iran. According to CNN Breaking News, the deal is scheduled to be formally signed this coming Friday. This..."
         }
       },
       {
         "kind": "t3",
         "data": {
-          "title": "Test: Panel 2",
-          "selftext": "Second test article. The feed is pulling from caergai.github.io/news_feed/docs/feed.json via VRCStringDownloader."
+          "title": "China's secretive Tianwen-2 probe reaches Earth's quasi-moon for a historic landing attempt.",
+          "selftext": "China's Tianwen-2 probe has arrived at Earth's quasi-moon and will soon attempt a first-of-its-kind landing. The mission centers on a secretive Chinese spacecraft that has successfully reached this..."
         }
       },
       {
         "kind": "t3",
         "data": {
-          "title": "Test: Panel 3",
-          "selftext": "Third test article. Once all three show up, we can automate this with a GitHub Actions workflow that fetches live news."
+          "title": "French president urges US AI sharing at G7 as Europe demands regulatory checks.",
+          "selftext": "AI executives gathered at the G7 summit as the French president urged the United States to share cutting-edge artificial intelligence capabilities with allied nations. The summit highlights a push ..."
         }
       }
     ]

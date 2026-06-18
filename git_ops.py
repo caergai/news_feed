@@ -12,7 +12,7 @@ def push_reports():
     
     try:
         # 1. Stage the reports folder and feed.json
-        subprocess.run(["git", "add", "reports/", "feed.json"], check=True, cwd=project_root)
+        subprocess.run(["git", "add", "docs/"], check=True, cwd=project_root)
         
         # 2. Commit the changes
         date_str = datetime.now().strftime("%Y-%m-%d")
