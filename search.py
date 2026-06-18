@@ -104,14 +104,6 @@ async def search_all(settings: Settings) -> list[dict]:
         if isinstance(r, list):
             all_raw.extend(r)
 
-    # Image/meme search
-    img_tasks = [search_images("AI meme 2025 2026", settings),
-                 search_images("AI funny robot 2025 2026", settings)]
-    img_results = await asyncio.gather(*img_tasks, return_exceptions=True)
-    for r in img_results:
-        if isinstance(r, list):
-            all_raw.extend(r)
-
     # Deduplicate by canonical URL
     seen: dict[str, dict] = {}
     for item in all_raw:

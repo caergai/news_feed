@@ -211,15 +211,7 @@ async def run_summarization(llm: LLMClient, selected: list[dict], concurrency: i
 
     tasks = []
     for story in selected:
-        img_url = story.get("image_url") or story.get("img_src", "")
-        engine = (story.get("engine") or "").lower()
-        is_img_search = engine in ("bing images", "google images", "yandex images", "duckduckgo images")
-        is_img_story = story.get("source_platform") == "image" or is_img_search
-        if img_url and is_img_story:
-            story["has_image"] = True
-            tasks.append(summarize_image(story))
-        else:
-            tasks.append(summarize_text(story))
+        tasks.append(summarize_text(story))
 
     results = await asyncio.gather(*tasks, return_exceptions=True)
     summarized = [r for r in results if isinstance(r, dict)]
@@ -263,14 +255,6 @@ async def run_news(settings: config.Settings | None = None) -> str | None:
     # Phase 3: Summarization
     summarized = await run_summarization(llm, selected, concurrency=s.summarize_concurrency)
 
-    # Phase 3.5: Download images
-    today_str = datetime.now().strftime("%Y-%m-%d")
-    base_image_dir = os.path.join(out_dir, "images", today_str)
-    log.info("[%s] Downloading images for %d stories", sid, len(summarized))
-
-    img_count = await download_images_parallel(summarized, base_image_dir, concurrency=5)
-    log.info("[%s] Downloaded %d images", sid, img_count)
-
     # Phase 4: Output
     digest = render_digest(summarized)
     path = save_digest(digest, out_dir)
@@ -280,8 +264,8 @@ async def run_news(settings: config.Settings | None = None) -> str | None:
     feed_path = save_feed_json(summarized, out_dir, max_items=3)
     log.info("[%s] VRChat feed written to %s", sid, feed_path)
 
-    # HTML output
-    html_content = render_html_digest(summarized, base_image_dir)
+    # HTML output (no images)
+    html_content = render_html_digest(summarized, "")
     html_path = save_html(html_content, out_dir)
     log.info("[%s] HTML written to %s", sid, html_path)
 
@@ -299,7 +283,7 @@ async def run_news(settings: config.Settings | None = None) -> str | None:
     event_log.log_event("pipeline_end", {
         "sid": sid, "elapsed": round(elapsed, 1),
         "candidates": len(candidates), "selected": len(selected),
-        "summarized": len(summarized), "images": img_count,
+        "summarized": len(summarized),
         "path": path, "html_path": html_path,
     })
 
