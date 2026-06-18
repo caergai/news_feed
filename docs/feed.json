@@ -1,0 +1,27 @@
+{
+  "data": {
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "title": "Test: Feed connected!",
+          "selftext": "This is a test article. If you see this in VRChat, the GitHub Pages feed is working. Next step: connect a live news source."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "Test: Panel 2",
+          "selftext": "Second test article. The feed is pulling from caergai.github.io/news_feed/docs/feed.json via VRCStringDownloader."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "Test: Panel 3",
+          "selftext": "Third test article. Once all three show up, we can automate this with a GitHub Actions workflow that fetches live news."
+        }
+      }
+    ]
+  }
+}
