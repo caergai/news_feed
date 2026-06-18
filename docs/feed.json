@@ -19,7 +19,49 @@
         "kind": "t3",
         "data": {
           "title": "Nine projects selected to ignite Discovery supercomputer's day-one science mission.",
-          "selftext": "On June 17, 2026, researchers at the Department of Energy's Oak Ridge National Laboratory selected the first nine research projects to execute on the Discovery supercomputer. These applications are designated for \"day-one science,\" representing the inaugural set of computational workloads that will utilize the system immediately upon availability. This selection marks a critical operational milestone, shifting focus from hardware readiness to the immediate advancement of scientific discovery across nine distinct domains.\n\nThe selection of day-one science projects accelerates the transition of next-generation supercomputing infrastructure into active research, enabling immediate high-impact discoveries and reinforcing the strategic importance of high-performance computing in addressing c..."
+          "selftext": "On June 17, 2026, researchers at the Department of Energy's Oak Ridge National Laboratory selected the first nine research projects to execute on the Discovery supercomputer. These applications are designated for \"day-one science,\" representing the inaugural set of computational workloads that will utilize the system immediately upon availability. This selection marks a critical operational milestone, shifting focus from hardware readiness to the immediate advancement of scientific discovery across nine distinct domains.\n\nThe selection of day-one science projects accelerates the transition of next-generation supercomputing infrastructure into active research, enabling immediate high-impact discoveries and reinforcing the strategic importance of high-performance computing."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "Climate summit reaches landmark agreement on carbon pricing mechanism.",
+          "selftext": "World leaders at the annual climate summit have agreed to a new global carbon pricing framework that aims to standardize emission costs across participating nations. The agreement includes provisions for developing nations and establishes a minimum carbon price floor.\n\nAnalysts say this could be the most significant step toward coordinated climate action since the Paris Agreement, potentially redirecting trillions in investment toward clean energy."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "Major breakthrough in quantum computing error correction published.",
+          "selftext": "A team of researchers has published a new method for quantum error correction that dramatically reduces the overhead required for fault-tolerant quantum computation. The approach uses a novel combination of surface codes and machine learning.\n\nThis breakthrough could accelerate the timeline for practical quantum computers capable of solving real-world problems in drug discovery and materials science."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "Global food prices surge as drought hits major grain belts.",
+          "selftext": "Severe drought conditions across North America and parts of Europe have led to the lowest wheat and corn harvests in over a decade, sending global food prices to record levels. The UN has warned of potential food insecurity in vulnerable regions.\n\nEmergency aid organizations are preparing for increased demand, while agricultural experts urge immediate action to diversify food supply chains and invest in drought-resistant crop varieties."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "SpaceX Starship completes first commercial cargo mission to lunar orbit.",
+          "selftext": "SpaceX's Starship has successfully delivered cargo to lunar orbit for the first time, marking a major milestone in commercial space transportation. The mission carried scientific instruments and supply modules for upcoming lunar base construction.\n\nThis achievement positions Starship as a key component in NASA's Artemis program and opens new possibilities for sustained lunar exploration and resource extraction."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "New AI regulation framework adopted by European Union member states.",
+          "selftext": "The European Union has formally adopted comprehensive AI regulation that establishes strict requirements for transparency, accountability, and safety in artificial intelligence systems. The framework includes specific provisions for large language models and autonomous systems.\n\nIndustry leaders have expressed mixed reactions, with some welcoming clear guidelines while others warn of potential impacts on innovation and competitiveness in the global AI market."
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "title": "Historic peace agreement between regional rivals ends decades of border conflict.",
+          "selftext": "Two nations locked in a decades-long border dispute have signed a comprehensive peace agreement mediated by the United Nations. The deal includes provisions for demilitarization, economic cooperation, and cultural exchange programs.\n\nDiplomatic analysts describe the agreement as a model for resolving similar conflicts in other regions, highlighting the importance of sustained multilateral diplomacy and economic incentives in achieving lasting peace."
         }
       }
     ]
